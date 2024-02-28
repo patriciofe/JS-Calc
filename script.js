@@ -110,7 +110,7 @@ const prepareOperation = (operator) => {
 const processCalculation = () => {
     calculation.number2 = stringToNum(mainString);
     calculation.result = calculate()
-    secondaryString = `${calculation.number1} ${convertOperatorToSymbol(calculation.operator)} ${calculation.number2}`
+    secondaryString += ` ${mainString}`
     mainString = adjustLength(calculation.result)
 
     resetCalculation(calculation.result)
