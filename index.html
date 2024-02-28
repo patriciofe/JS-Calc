@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css" >
+    <script defer src="script.js"></script>
+    <title>Calculator</title>
+</head>
+<body>
+    <div id="calculator">
+        <div id="display">
+            <div id="display-secondary-text"></div>
+            <div id="display-main-text">0</div>
+        </div>
+        <div class="row">
+            <button class="button light-grey" id="clear" name="clear" value="clear">C</button>
+            <button class="button light-grey" name="numberModifier" value="negate">+/-</button>
+            <button class="button light-grey" name="numberModifier" value="togglePercent">%</button>
+            <button class="button orange" name="operator" value="divide">÷</button>
+        </div>
+        <div class="row">
+            <button class="button dark-grey" name="number" value="7">7</button>
+            <button class="button dark-grey" name="number" value="8">8</button>
+            <button class="button dark-grey" name="number" value="9">9</button>
+            <button class="button orange" name="operator" value="multiply">×</button>
+        </div>
+        <div class="row">
+            <button class="button dark-grey" name="number" value="4">4</button>
+            <button class="button dark-grey" name="number" value="5">5</button>
+            <button class="button dark-grey" name="number" value="6">6</button>
+            <button class="button orange" name="operator" value="subtract">-</button>
+        </div>
+        <div class="row">
+            <button class="button dark-grey" name="number" value="1">1</button>
+            <button class="button dark-grey" name="number" value="2">2</button>
+            <button class="button dark-grey" name="number" value="3">3</button>
+            <button class="button orange" name="operator" value="add">+</button>
+        </div>
+        <div class="row">
+            <button class="button long dark-grey" name="number" value="0">0</button>
+            <button class="button dark-grey" name="numberModifier" value="decimal">.</button>
+            <button class="button orange" name="equals" value="equals">=</button>
+        </div>
+    </div>
+</body>
+</html>
