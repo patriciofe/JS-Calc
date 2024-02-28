@@ -67,8 +67,7 @@ document.addEventListener('click', (event) => {
 
 const addNumberToMainString = (numStr) => {
     if (mainString === "0" && numStr == "0" && !mainString.includes(".")) return;
-    // FIXME: Clear button does not reset properly; zero decimals are not being allowed
-    //        Check modifyMainStringNumber function
+    if (numStr === "." && mainString.includes(".")) return;
     if (calculation.isAwaitingInput) initializeMainNumber(numStr);
     else if (mainString.length < MAX_STRING_LENGTH) mainString += numStr;
 }
@@ -84,7 +83,6 @@ const initializeMainNumber = (numStr) => {
 
 const modifyMainStringNumber = (str, modifier) => {
     switch (modifier) {
-        // TODO: Move decimal to number handler
         case "negate":
             if (str === '0' || calculation.isAwaitingInput) return str
             else if ( str.includes("-") ) return str.slice(1, str.length);
@@ -92,11 +90,6 @@ const modifyMainStringNumber = (str, modifier) => {
         case "togglePercent":
             if ( str.includes("%") ) return str.slice(0, str.length - 1);
             else return `${str}%`;
-        case "decimal":
-            if ( !str.includes(".") ) {
-                initializeMainNumber(`${str}.`);
-                return `${str}.`;
-            };
     }
 }
 
