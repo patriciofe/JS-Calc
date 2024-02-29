@@ -1,7 +1,10 @@
 :root {
     --orange: #ff9f0a;
+    --orange-hover: #ffd28f;
     --light-grey: #a5a5a5;
+    --light-grey-hover: #c6c6c6;
     --dark-grey: #333333;
+    --dark-grey-hover: #6b6b6b;
 }
 
 body {
@@ -69,6 +72,18 @@ body {
 
 .button:hover {
     cursor: pointer;
+}
+
+.orange:hover {
+    background-color: var(--orange-hover);
+}
+
+.light-grey:hover {
+    background-color: var(--light-grey-hover);
+}
+
+.dark-grey:hover {
+    background-color: var(--dark-grey-hover);
 }
 
 .long {
